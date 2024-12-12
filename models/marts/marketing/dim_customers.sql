@@ -1,3 +1,4 @@
+
 with customers as (
     select * from {{ ref ('stg_jaffle_shop__customers')}}
 ),
@@ -27,4 +28,6 @@ customer_orders as (
     left join customer_orders using (customer_id)
 )
 select * from final
+
+
 
